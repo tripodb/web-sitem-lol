@@ -50,3 +50,19 @@ bolButonu.addEventListener("click", function(){
         sonucYeri.textContent = "Sonuç" + (s1 / s2); 
     }
 });
+
+//Sayı tahmin oyunu
+const gizliSayi = Math.floor(Math.random() *1000) + 1;
+const tahminButonu = document.getElementById("tahminEt");
+const oyunSonucYeri = document.getElementById("oyunSonuc");
+
+tahminButonu.addEventListener("click", function(){
+    const tahmin = Number(document.getElementById("tahmin").value);
+    if(tahmin === gizliSayi){
+        oyunSonucYeri.textContent = "vay be nasıl bildin :O Sayı " + gizliSayi + "idi.";
+    } else if (tahmin > gizliSayi){
+        oyunSonucYeri.textContent = "Daha küçük bir sayı söyle";
+    } else {
+        oyunSonucYeri.textContent = "Daha büyük bir sayı söyle";
+    }
+});
