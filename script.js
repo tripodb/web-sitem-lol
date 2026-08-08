@@ -21,3 +21,32 @@ toplaButonu.addEventListener("click", function(){
     const toplam = s1+s2;
     sonucYeri.textContent = "Sonuç: " + toplam;
 });
+
+
+const cikarButonu = document.getElementById("cikar");
+cikarButonu.addEventListener("click", function(){
+    const s1 = Number(document.getElementById("sayi1").value);
+    const s2 = Number(document.getElementById("sayi2").value);
+    sonucYeri.textContent = "Sonuç" + (s1 - s2);
+
+});
+
+
+const carpButonu = document.getElementById("carp");
+carpButonu.addEventListener("click", function(){
+    const s1 = Number(document.getElementById("sayi1").value);
+    const s2 = Number(document.getElementById("sayi2").value);
+    sonucYeri.textContent = "Sonuç" + (s1 * s2);
+}); 
+
+
+const bolButonu = document.getElementById("bol");
+bolButonu.addEventListener("click", function(){
+    const s1= Number(document.getElementById("sayi1").value);
+    const s2= Number(document.getElementById("sayi2").value);
+    if (s2 === 0) {
+        sonucYeri.textContent = "0'a bölünemez.";
+    } else {
+        sonucYeri.textContent = "Sonuç" + (s1 / s2); 
+    }
+});
